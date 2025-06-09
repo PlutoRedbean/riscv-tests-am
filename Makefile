@@ -51,4 +51,4 @@ gdb: all
 clean:
 	rm -rf Makefile-* build/
 
-.PHONY: all run clean $(ALL)
+.PHONY: all run gdb clean $(ALL)
