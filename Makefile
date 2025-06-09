@@ -44,7 +44,7 @@ Makefile-%: $$(call find_src,%)
 
 run: all
 	@cat $(RESULT)
-	@rm $(RESULT)
+	@grep -q "FAIL" $(RESULT); FAIL=$$?; rm $(RESULT); test $$FAIL -ne 0
 
 gdb: all
 
